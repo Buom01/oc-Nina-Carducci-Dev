@@ -117,7 +117,8 @@
       $(`#${lightboxId}`)
         .find(".lightboxImage")
         .attr("src", element.attr("src").replace('.thumbnail', ''))
-        .attr('data-thumbnail', element.attr("src"));
+        .attr('data-thumbnail', element.attr("src"))
+        .attr('alt', element.attr("alt"));
       $(`#${lightboxId}`).modal("toggle");
     },
     prevImage() {
@@ -159,7 +160,8 @@
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage")
         .attr("src",  $(next).attr("src").replace('.thumbnail', ''))
-        .attr('data-thumbnail', $(next).attr("src"));
+        .attr('data-thumbnail', $(next).attr("src"))
+        .attr('alt', $(next).attr("alt"));
     },
     nextImage() {
       let activeImage = null;
@@ -198,7 +200,8 @@
       next = imagesCollection[index + 1] || imagesCollection[0];
       $(".lightboxImage")
         .attr("src",  $(next).attr("src").replace('.thumbnail', ''))
-        .attr('data-thumbnail', $(next).attr("src"));
+        .attr('data-thumbnail', $(next).attr("src"))
+        .attr('alt', $(next).attr("alt"));
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
@@ -212,7 +215,7 @@
                                 ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
                                 : '<span style="display:none;" />'
                             }
-                            <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
+                            <img class="lightboxImage img-fluid"/>
                             ${
                               navigation
                                 ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
