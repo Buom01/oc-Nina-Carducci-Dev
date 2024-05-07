@@ -90,7 +90,7 @@ body {
 	font-style: italic;
 	width: 60%;
 }
-#about-me p {
+#about-me p, #about-me blockquote {
 	width: 80%;
 	font-size: 14px;
 }
@@ -152,7 +152,7 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 2.5rem;
 }
 .quote__author {
 	font-family: Spectral;
